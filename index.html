@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Vue 3 Boolzapp
+    </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app">
+        <main class="flex">
+            <section class="userbar flex  flex-column">
+                <div class="user-profile"></div>
+                <div class="notifications"></div>
+                <div class="searchbar"></div>
+                <div class="contacts">
+                    <!-- TODO: contacts list will show up here -->
+                </div>
+            </section>
+            <section class="conversation-container flex flex-column">
+                <div class="user-profile"></div>
+                <div class="messages clearfix">
+                    <article class="message received">
+                        Sciao Belo, stasero vieno?
+                    </article>
+                    <article class="message sent">
+                        No dottoressa, veramente sarei occupato.
+                    </article>
+                    <article class="message received">
+                        Si ma tu ha serio problemo, sposto sembro!
+                    </article>
+                    <article class="message sent">
+                        Se vengo da una psichiatra ci sara' un motivo!!!!
+                    </article>
+                </div>
+                <div class="message-input"></div>
+            </section>
+        </main>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

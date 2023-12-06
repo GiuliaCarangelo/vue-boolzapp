@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div#app{
+    height: 100vh;
+    width: 100%;
+
+    background: linear-gradient(to bottom, #009688 0px, #009688 15vh,
+    #dddbd1 15vh, #d2dbdc 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    height: 94%;
+    width: 80%;
+    background-color: red;
+}
+
+main section.userbar{
+    width: 35%;
+    background-color: #ffffff;
+}
+
+section div.user-profile{
+    height: 70px;
+    background-color: #eaeaea;
+}
+
+section.userbar div.notifications{
+    height: 80px;
+    background-color: #8edafc;
+}
+
+section.userbar div.searchbar{
+    height: 60px;
+    background-color: #fafafa;
+}
+
+section.userbar div.contacts{
+    height: calc(100% - 210px);
+    background-color: #ffffff;
+}
+
+main section.conversation-container{
+    width: 65%;
+    background-color: #eaeaea;
+}
+
+div.messages{
+    height: calc(100% - 145px);
+    background-image: url('../img/mine.jpg');
+    padding: 2rem;
+}
+
+div.messages > article.message{
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    margin: 0 2rem .8rem 2rem;
+    background-color: #8edafc;
+    clear: both;
+}
+
+div.messages > article.message.received{
+    float: left;
+    background-color: #ffffff;
+    margin-right: 5rem;
+}
+
+div.messages > article.message.sent{
+    float: right;
+    background-color: #d5f9ba;
+    margin-left: 5rem;
+}
+
+main section.conversation-container div.message-input{
+    height: 75px;
+    background-color: #f3eeea;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.clearflix::after{
+    display: block;
+    clear: both;
+    content:'';
+}
+
