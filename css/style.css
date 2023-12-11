@@ -105,6 +105,37 @@ main section.conversation-container div.message-input{
     content:'';
 }
 
+.notifications-text-content{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.notifications-text-content h3, .notifications-text-content p{
+    font-size: 1rem;
+}
+
+.notifications{
+    display: flex;
+}
+
+.notifications i {
+    font-size: 30px;
+    color: #8edafc;
+    background-color: #f2fbff;
+    padding: .5rem;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+}
+
+.notifications h3{
+    font-weight: 100;
+}
+
 .searchbar {
     display: flex;
     align-items: center;
@@ -153,10 +184,6 @@ span.chat-element img {
     border-radius: 50%;
 }
 
-.text-chat-preview {
-    flex: 1;
-}
-
 .contact-name {
     font-weight: bold;
 }
@@ -166,4 +193,24 @@ span.chat-element img {
     color: #888;
     margin: 3px 0;
     font-size: 14px;
+}
+
+.time-sent{
+    justify-content: end;
+}
+
+.message-input{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.message-input i{
+    font-size: 1.5rem;
+    color: #6d7475;
+}
+
+.message-input input{
+    all: unset;
+    width: 80%;
 }
