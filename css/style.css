@@ -45,9 +45,14 @@ section.userbar div.searchbar{
     background-color: #fafafa;
 }
 
-section.userbar div.contacts{
+section.contacts {
     height: calc(100% - 210px);
     background-color: #ffffff;
+    overflow-y: auto;
+}
+
+section.userbar div.contacts span h3{
+    font-weight: 100;
 }
 
 main section.conversation-container{
@@ -100,3 +105,49 @@ main section.conversation-container div.message-input{
     content:'';
 }
 
+section.contacts {
+    height: calc(100% - 210px);
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.chat-container {
+    padding: 10px;
+}
+
+span.chat-element {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+span.chat-element:hover {
+    background-color: #f0f0f0;
+}
+
+.propic-container {
+    margin-right: 15px;
+}
+
+span.chat-element img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.text-chat-preview {
+    flex: 1;
+}
+
+.contact-name {
+    font-weight: bold;
+}
+
+.last-message,
+.time-sent {
+    color: #888;
+    margin: 3px 0;
+    font-size: 14px;
+}

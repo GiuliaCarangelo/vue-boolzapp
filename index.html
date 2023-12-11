@@ -21,9 +21,20 @@
                 <div class="user-profile"></div>
                 <div class="notifications"></div>
                 <div class="searchbar"></div>
-                <div class="contacts">
-                    <!-- TODO: contacts list will show up here -->
-                </div>
+                <section class="contacts">
+                    <div class="chat-container">
+                        <span v-for="(contact, index) in chatInfo" :key="index" class="chat-element">
+                            <div class="propic-container">
+                                <img :src="contact.image" alt="user profile picture">
+                            </div>
+                            <div class="text-chat-preview">
+                                <h3 class="contact-name">{{ contact.name }}</h3>
+                                <p class="last-message">{{ contact.lastMessage }}</p>
+                                <p class="time-sent">{{ contact.sentAtTime }}</p>
+                            </div>
+                        </span>
+                    </div>
+                </section>
             </section>
             <section class="conversation-container flex flex-column">
                 <div class="user-profile"></div>
