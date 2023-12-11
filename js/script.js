@@ -3,6 +3,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            newMessage: '',
+            allMessages: [],
             chatInfo: [
                 {
                     image: "./img/avatar_1.jpg",
@@ -55,4 +57,15 @@ createApp({
             ]
         }
     },
-}).mount('#app');
+    methods: {
+        sendMessage(){
+            if (this.newMessage !== ''){
+                this.allMessages.push({message: this.newMessage, status: true});
+                console.log("Premutosssss");
+                this.allMessages.push({message: "Non ti voglio mai piu' parlare..", status: false});
+                this.newMessage = '';
+                }
+            }
+        },
+    }
+).mount('#app');

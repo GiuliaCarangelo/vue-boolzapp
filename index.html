@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +10,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <div id="app">
@@ -48,10 +48,10 @@
             <section class="conversation-container flex flex-column">
                 <div class="user-profile"></div>
                 <div class="messages clearfix">
-                    <article class="message received">
+                    <!-- <article class="message received">
                         Sciao Belo, stasero vieno?
                     </article>
-                    <article class="message sent">
+                    <article class="message sent" id="messageSent">
                         No dottoressa, veramente sarei occupato.
                     </article>
                     <article class="message received">
@@ -59,11 +59,17 @@
                     </article>
                     <article class="message sent">
                         Se vengo da una psichiatra ci sara' un motivo!!!!
+                    </article> -->
+                    <article v-for="(typedMessage, index) in allMessages" :key="index" :class="['message', typedMessage.status ? 'sent' : 'received']">
+                        {{ typedMessage.message }}
                     </article>
                 </div>
                 <div class="message-input">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" name="typeMessage" id="typeMessage" placeholder="Scrivi un messaggio">
+                    <!-- <input type="text" class="form-control" @keyup.enter="addProduct" v-model="newProduct" placeholder="Type product's name"
+                            aria-label="product's name" aria-describedby="button-addon2"> -->
+                    <input type="text" name="typeMessage" id="typeMessage" placeholder="Scrivi un messaggio"
+                        @keyup.enter="sendMessage" v-model="newMessage">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </section>
@@ -71,4 +77,5 @@
     </div>
     <script src="./js/script.js"></script>
 </body>
+
 </html>
