@@ -105,6 +105,22 @@ main section.conversation-container div.message-input{
     content:'';
 }
 
+.searchbar {
+    display: flex;
+    align-items: center;
+}
+
+.searchbar i {
+    color: #d0d0d0;
+    padding: 0 35px;
+}
+
+.searchbar input {
+    all: unset;
+    align-self: center;
+    width: 100%;
+}
+
 section.contacts {
     height: calc(100% - 210px);
     background-color: #ffffff;

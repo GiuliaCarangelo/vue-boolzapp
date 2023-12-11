@@ -20,7 +20,10 @@
             <section class="userbar flex  flex-column">
                 <div class="user-profile"></div>
                 <div class="notifications"></div>
-                <div class="searchbar"></div>
+                <div class="searchbar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="searchChat" id="searchChat" placeholder="Cerca o inizia una nuova chat">
+                </div>
                 <section class="contacts">
                     <div class="chat-container">
                         <span v-for="(contact, index) in chatInfo" :key="index" class="chat-element">
